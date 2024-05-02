@@ -4,49 +4,7 @@
       <h1 class="text-center mb-3">
         <i class="fas fa-user-plus"></i> Register
       </h1>
-      <%- include('partials/messages'); -%>
-      <form action="/users/register" method="POST">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input
-            type="name"
-            id="name"
-            name="name"
-            class="form-control"
-            placeholder="Enter Name"
-            value="<%= typeof name != 'undefined' ? name : '' %>"
-          />
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="form-control"
-            placeholder="Enter Email"
-            value="<%= typeof email != 'undefined' ? email : '' %>"
-          />
-          <div class="form-group">
-            <label for="CEP">CEP</label>
-            <input
-              type="CEP"
-              id="CEP"
-              name="CEP"
-              class="form-control"
-              placeholder="Enter CEP"
-              value="<%= typeof CEP != 'undefined' ? CEP : '' %>"
-            />
-        </div>
-
-
-
-
-
-
-
-
-        <script>
+      <script>
         function limpa_formulário_cep() {
           //Limpa valores do formulário de cep.
           document.getElementById('rua').value=("");
@@ -114,41 +72,97 @@
           limpa_formulário_cep();
       }
   };
-
   </script>
-  </head>
-
-  <body>
-  <!-- Inicio do formulario -->
-    <form method="get" action=".">
-      <label>Cep:
-      <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
-             onblur="pesquisacep(this.value);" /></label><br />
-      <label>Rua:
-      <input name="rua" type="text" id="rua" size="60" /></label><br />
-      <label>Bairro:
-      <input name="bairro" type="text" id="bairro" size="40" /></label><br />
-      <label>Cidade:
-      <input name="cidade" type="text" id="cidade" size="40" /></label><br />
-      <label>Estado:
-      <input name="uf" type="text" id="uf" size="2" /></label><br />
-      <label>IBGE:
-      <input name="ibge" type="text" id="ibge" size="8" /></label><br />
-    </form>
-  </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <form action="/users/register" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="name"
+            id="name"
+            name="name"
+            class="form-control"
+            placeholder="Enter Name"
+            value="<%= typeof name != 'undefined' ? name : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="Enter Email"
+            value="<%= typeof email != 'undefined' ? email : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="CEP">CEP</label>
+          <input
+            type="CEP"
+            id="CEP"
+            name="CEP"
+            class="form-control"
+            placeholder="Enter CEP"
+            value="<%= typeof CEP != 'undefined' ? CEP : '' %>"
+            onblur="pesquisacep(this.value);" /></label><br
+          />
+        </div>
+        <div class="form-group">
+          <label for="rua">Rua</label>
+          <input
+            type="rua"
+            id="rua"
+            name="rua"
+            class="form-control"
+            placeholder="Enter rua"
+            value="<%= typeof rua != 'undefined' ? rua : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="bairro">Bairro</label>
+          <input
+            type="bairro"
+            id="bairro"
+            name="bairro"
+            class="form-control"
+            placeholder="Enter bairro"
+            value="<%= typeof bairro != 'undefined' ? bairro : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="cidade">Cidade</label>
+          <input
+            type="cidade"
+            id="cidade"
+            name="cidade"
+            class="form-control"
+            placeholder="Enter cidade"
+            value="<%= typeof cidade != 'undefined' ? cidade : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="estado">Estado</label>
+          <input
+            type="estado"
+            id="uf"
+            name="estado"
+            class="form-control"
+            placeholder="Enter estado"
+            value="<%= typeof estado != 'undefined' ? estado : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="ibge">IBGE</label>
+          <input
+            type="ibge"
+            id="ibge"
+            name="ibge"
+            class="form-control"
+            placeholder="Enter ibge"
+            value="<%= typeof ibge != 'undefined' ? ibge : '' %>"
+          />
+        </div>
         <div class="form-group">
           <label for="password">Password</label>
           <input
