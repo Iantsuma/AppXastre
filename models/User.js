@@ -13,9 +13,13 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    date: {
-        type: Date,
-        default: Date.now
+    // date: {
+    //     type: Date,
+    //     default: Date.now
+    // },
+    cep: {
+        type: String,
+        required: true
     }
 });
 
